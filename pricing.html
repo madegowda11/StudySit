@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pricing - CoWorkHub</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+  background-image: url('TECHNOLOGIA.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+    header {
+      background-color: #1f2937;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #374151;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #4b5563;
+      border-radius: 5px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      color: #111827;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #111827;
+    }
+
+    .price {
+      font-size: 2em;
+      color: #10b981;
+      margin: 10px 0;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .features li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      color: #374151;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #10b981;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #059669;
+    }
+
+    footer {
+      background-color: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Pricing Plans</h1>
+    <p>Choose the best plan that suits your working style</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="spaces.html">Spaces</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h2>Our Plans</h2>
+    <div class="pricing-grid">
+
+      <div class="card">
+        <h3>Day Pass</h3>
+        <p class="price">$20 / day</p>
+        <ul class="features">
+          <li>Access to Hot Desk</li>
+          <li>High-Speed Wi-Fi</li>
+          <li>Free Coffee</li>
+          <li>8AM – 8PM Access</li>
+        </ul>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+
+      <div class="card">
+        <h3>Monthly Desk</h3>
+        <p class="price">$250 / month</p>
+        <ul class="features">
+          <li>Dedicated Desk</li>
+          <li>Locker & Storage</li>
+          <li>24/7 Access</li>
+          <li>Free Conference Room Use</li>
+        </ul>
+        <a href="#" class="btn">Choose Plan</a>
+      </div>
+
+      <div class="card">
+        <h3>Private Office</h3>
+        <p class="price">From $600 / month</p>
+        <ul class="features">
+          <li>Private, Lockable Office</li>
+          <li>Mailbox & Address</li>
+          <li>24/7 Key Access</li>
+          <li>All Amenities Included</li>
+        </ul>
+        <a href="#" class="btn">Get Quote</a>
+      </div>
+
+      <div class="card">
+        <h3>Meeting Room</h3>
+        <p class="price">$30 / hour</p>
+        <ul class="features">
+          <li>Seats up to 10</li>
+          <li>Projector & Whiteboard</li>
+          <li>Hourly Booking</li>
+          <li>On-Demand Catering</li>
+        </ul>
+        <a href="#" class="btn">Book a Room</a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 CoWorkHub. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+

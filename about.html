@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - CoWorkHub</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f0fdfa, #ffffff);
+      color: white;
+      line-height: 1.6;
+      overflow-x: hidden;
+    } 
+    body {
+  background-image: url('TECHNOLOGIA.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+    header {
+      background-color: #1f2937;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #374151;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #10b981;
+    }
+
+    /* About Section */
+    .about-section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    .about-section h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      color: white;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .highlight {
+      color: #10b981;
+      font-weight: bold;
+    }
+
+    /* Founder Section */
+    .founder-section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+      animation: slideUp 1s ease-out;
+    }
+
+    .founder-photo {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .founder-photo img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .founder-photo img:hover {
+      transform: scale(1.05);
+    }
+
+    .founder-info {
+      flex: 2;
+    }
+
+    .founder-info h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .founder-info h4 {
+      color: #10b981;
+      margin-bottom: 20px;
+    }
+
+    .founder-info p {
+      font-size: 1rem;
+      color: white;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 60px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(60px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .founder-section {
+        flex-direction: column;
+      }
+
+      .founder-info h3 {
+        text-align: center;
+      }
+
+      .founder-info p {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>About StudySit</h1>
+    <p>Where ambition meets community</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="spaces.html">Spaces</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <h2>Our Mission</h2>
+    <p>
+      At <span class="highlight">StudySit</span>, we believe in more than just desks and Wi-Fi.
+      We believe in building a <span class="highlight">vibrant ecosystem</span> where creators,
+      entrepreneurs, and freelancers thrive together. Whether you're coding your next big app, designing
+      your brand, or just escaping the coffee shop chaos, we’re here to provide a space that inspires.
+    </p>
+  </section>
+
+  <!-- Founder Section -->
+  <section class="founder-section">
+    <div class="founder-photo">
+      <img src="MYPHOTO.jpg" alt="Founder Image">
+    </div>
+    <div class="founder-info">
+      <h3>Deb Mukherjee</h3>
+      <h4>Founder & Visionary</h4>
+      <p>      Deb started StudySit in 2025 with a single goal: to reshape how people experience their work life.
+        After spending years bouncing between coffee shops and crowded offices, he envisioned a new kind of workspace —
+        one that feels like home, fuels your creativity, and connects you with people who make you better.
+      </p>
+      <p>
+        Today, Deb continues to drive CoWorkHub with the same passion, leading innovation in workplace culture
+        while supporting the ever-evolving needs of the modern workforce.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 CoWorkHub. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+
