@@ -1,225 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - CoWorkHub</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #e0f7fa, #ffffff);
-      overflow-x: hidden;
-    }
-    body {
-  background-image: url('TECHNOLOGIA.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-
-    header {
-      background-color: #1f2937;
-      color: white;
-      text-align: center;
-      padding: 30px 0;
-    }
-
-    nav {
-      background-color: #374151;
-      display: flex;
-      justify-content: center;
-      padding: 15px 0;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 20px;
-      font-weight: 500;
-      transition: background 0.3s ease;
-    }
-
-    nav a:hover {
-      background-color: #4b5563;
-      border-radius: 5px;
-    }
-
-    .contact-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      min-height: 80vh;
-      padding: 50px 20px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .contact-form {
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(10px);
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-      padding: 40px;
-      max-width: 500px;
-      width: 100%;
-      animation: fadeInUp 1s ease-out;
-    }
-
-    .contact-form h2 {
-      margin-top: 0;
-      color: #1f2937;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 12px 15px;
-      margin: 15px 0;
-      border: none;
-      border-radius: 10px;
-      background: #f1f5f9;
-      font-size: 1em;
-    }
-
-    .contact-form button {
-      width: 100%;
-      padding: 12px;
-      background-color: #10b981;
-      border: none;
-      border-radius: 10px;
-      color: white;
-      font-size: 1em;
-      font-weight: bold;
-      transition: background 0.3s ease;
-      cursor: pointer;
-    }
-
-    .contact-form button:hover {
-      background-color: #059669;
-    }
-
-    .shapes {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      overflow: hidden;
-    }
-
-    .shape {
-      position: absolute;
-      border-radius: 50%;
-      opacity: 0.2;
-      animation: float 6s ease-in-out infinite;
-    }
-
-    .shape.circle {
-      background: #0ea5e9;
-      width: 120px;
-      height: 120px;
-      top: 10%;
-      left: 10%;
-    }
-
-    .shape.square {
-      background: #f59e0b;
-      width: 100px;
-      height: 100px;
-      top: 60%;
-      left: 70%;
-      transform: rotate(20deg);
-    }
-
-    .shape.triangle {
-      width: 0;
-      height: 0;
-      border-left: 60px solid transparent;
-      border-right: 60px solid transparent;
-      border-bottom: 100px solid #6366f1;
-      top: 30%;
-      left: 80%;
-    }
-
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0) rotate(0deg);
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - CoWorkHub</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #e0f7fa, #ffffff);
+        overflow-x: hidden;
       }
-      50% {
-        transform: translateY(-20px) rotate(10deg);
+      body {
+        background-image: url("TECHNOLOGIA.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
       }
-    }
 
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
+      header {
+        background-color: #1f2937;
+        color: white;
+        text-align: center;
+        padding: 30px 0;
       }
-      to {
-        opacity: 1;
-        transform: translateY(0);
+
+      nav {
+        background-color: #374151;
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
       }
-    }
 
-    footer {
-      background-color: #1f2937;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      z-index: 2;
-      position: relative;
-    }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        font-weight: 500;
+        transition: background 0.3s ease;
+      }
 
-    @media (max-width: 600px) {
+      nav a:hover {
+        background-color: #4b5563;
+        border-radius: 5px;
+      }
+
+      .contact-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        padding: 50px 20px;
+        position: relative;
+        z-index: 2;
+      }
+
       .contact-form {
-        padding: 25px;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        max-width: 500px;
+        width: 100%;
+        animation: fadeInUp 1s ease-out;
       }
-    }
-  </style>
-</head>
-<body>
 
-  <header>
-    <h1>Contact Us</h1>
-    <p>We’d love to hear from you — let's connect!</p>
-  </header>
+      .contact-form h2 {
+        margin-top: 0;
+        color: #1f2937;
+      }
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="spaces.html">Spaces</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 12px 15px;
+        margin: 15px 0;
+        border: none;
+        border-radius: 10px;
+        background: #f1f5f9;
+        font-size: 1em;
+      }
 
-  <div class="contact-section">
-    <div class="contact-form">
-      <h2>Get in Touch</h2>
-      <form action="#" method="post">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+      .contact-form button {
+        width: 100%;
+        padding: 12px;
+        background-color: #10b981;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 1em;
+        font-weight: bold;
+        transition: background 0.3s ease;
+        cursor: pointer;
+      }
+
+      .contact-form button:hover {
+        background-color: #059669;
+      }
+
+      .shapes {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        overflow: hidden;
+      }
+
+      .shape {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.2;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .shape.circle {
+        background: #0ea5e9;
+        width: 120px;
+        height: 120px;
+        top: 10%;
+        left: 10%;
+      }
+
+      .shape.square {
+        background: #f59e0b;
+        width: 100px;
+        height: 100px;
+        top: 60%;
+        left: 70%;
+        transform: rotate(20deg);
+      }
+
+      .shape.triangle {
+        width: 0;
+        height: 0;
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-bottom: 100px solid #6366f1;
+        top: 30%;
+        left: 80%;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-20px) rotate(10deg);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      footer {
+        background-color: #1f2937;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        z-index: 2;
+        position: relative;
+      }
+
+      @media (max-width: 600px) {
+        .contact-form {
+          padding: 25px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you — let's connect!</p>
+    </header>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="spaces.html">Spaces</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="contact-section">
+      <div class="contact-form">
+        <h2>Get in Touch</h2>
+        <form action="#" method="post">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Your Message"
+          ></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Animated 3D-like shapes -->
+      <div class="shapes">
+        <div class="shape circle"></div>
+        <div class="shape square"></div>
+        <div class="shape triangle"></div>
+      </div>
     </div>
 
-    <!-- Animated 3D-like shapes -->
-    <div class="shapes">
-      <div class="shape circle"></div>
-      <div class="shape square"></div>
-      <div class="shape triangle"></div>
-    </div>
-  </div>
+    <footer>
+      <p>&copy; 2025 StudySit. All rights reserved.</p>
+    </footer>
 
-  <footer>
-    <p>&copy; 2025 StudySit. All rights reserved.</p>
-  </footer>
+    <script>
+      const form = document.querySelector(".contact-form form");
 
-</body>
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const message = form.message.value.trim();
+        let errors = [];
+
+        if (name === "") errors.push("Name cannot be empty.");
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email))
+          errors.push("Please enter a valid email.");
+        if (message.length < 20)
+          errors.push("Message must be at least 20 characters.");
+
+        if (errors.length > 0) {
+          alert(errors.join("\n"));
+          return false;
+        }
+
+        alert("Form submitted successfully!");
+        form.reset();
+      });
+    </script>
+  </body>
 </html>
-
