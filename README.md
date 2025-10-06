@@ -27,10 +27,10 @@ git push origin YourBranchName
 Congratulations! You've made your first contribution.
 
 
-Code of conduct
-Be respectful, inclusive, and constructive in discussions, reviews, and issues.
+Code of conduct:
+ Be respectful, inclusive, and constructive in discussions, reviews, and issues.
 
 
-License
-This project is licensed under the MIT License.
+License:
+ This project is licensed under the MIT License.
 
