@@ -1,171 +1,180 @@
-/* style.css */
+/* --- RESET & BASE --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-}
-
-header {
-  background: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-}
-
-nav {
-  background: #444;
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9fafb;
+      color: green;
+      overflow-x: hidden;
+    }
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
 }
 
-nav a {
-  color: white;
-  padding: 10px 15px;
-  text-decoration: none;
-}
 
-nav a:hover {
-  background: #666;
-}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px;
-  background-color: white;
-}
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
-footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 20px;
-}
-/* Chatbot Styles */
-.chatbot-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-}
+    /* --- HEADER --- */
+    header {
+      background-color: #1f2937;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
 
-.chatbot-toggle {
-  background-color: #10b981;
-  color: white;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 26px;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
+    nav {
+      background-color: #374151;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px 0;
+    }
 
-.chatbot-toggle:hover {
-  transform: scale(1.1);
-}
+    nav a {
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
 
-.chatbot {
-  width: 300px;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  display: none;
-  flex-direction: column;
-  overflow: hidden;
-  animation: slideUp 0.3s ease;
-}
+    nav a:hover {
+      color: #10b981;
+    }
 
-.chatbot-header {
-  background-color: #10b981;
-  color: white;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
-}
+    /* --- HERO SLIDER --- */
+    .slider {
+      position: relative;
+      overflow: hidden;
+      max-height: 500px;
+    }
 
-.chatbot-header button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
-}
+    .slides {
+      display: flex;
+      transition: transform 0.8s ease-in-out;
+    }
 
-.chatbot-body {
-  padding: 15px;
-  height: 250px;
-  overflow-y: auto;
-  background: #f9fafb;
-}
+    .slide {
+      min-width: 100%;
+      transition: opacity 0.8s ease-in-out;
+    }
 
-.chatbot-footer {
-  display: flex;
-  border-top: 1px solid #e5e7eb;
-}
+    .slider-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 20px;
+    }
 
-.chatbot-footer input {
-  flex: 1;
-  border: none;
-  padding: 12px;
-  outline: none;
-  font-size: 14px;
-}
+    .slider-buttons button {
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      font-size: 24px;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
 
-.chatbot-footer button {
-  background-color: #10b981;
-  border: none;
-  color: white;
-  padding: 0 15px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
+    /* --- ABOUT SECTION --- */
+    .about {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+      animation: fadeIn 1.2s ease-in-out;
+    }
 
-.chatbot-footer button:hover {
-  background-color: #059669;
-}
+    .about h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
 
-.bot-msg, .user-msg {
-  background-color: #e5e7eb;
-  padding: 10px 15px;
-  border-radius: 20px;
-  margin-bottom: 10px;
-  max-width: 80%;
-  animation: fadeIn 0.3s ease;
-}
+    .about p {
+      font-size: 1.1rem;
+      color: white;
+    }
 
-.user-msg {
-  background-color: #d1fae5;
-  align-self: flex-end;
-}
+    /* --- REVIEWS SECTION --- */
+    .reviews {
+      background-color: #e0f2f1;
+      padding: 60px 20px;
+    }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
+    .reviews h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
+    .review-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    .review {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .review p {
+      color: #374151;
+      font-size: 0.95rem;
+    }
+
+    .review .author {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #10b981;
+    }
+
+    footer {
+      background-color: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    /* --- ANIMATIONS --- */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(60px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .slider-buttons button {
+        font-size: 18px;
+        padding: 8px;
+      }
+    }

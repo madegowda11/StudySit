@@ -14,18 +14,19 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #f0fdfa, #ffffff);
       color: white;
       line-height: 1.6;
       overflow-x: hidden;
     } 
-    body {
-  background-image: url('TECHNOLOGIA.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
 
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+    }
 
     header {
       background-color: #1f2937;
@@ -163,6 +164,9 @@
   </style>
 </head>
 <body>
+<video autoplay muted loop id="myVideo">
+  <source src="background.mp4" type="video/mp4">
+</video>
 
   <!-- Header -->
   <header>
@@ -218,4 +222,3 @@
 
 </body>
 </html>
-
