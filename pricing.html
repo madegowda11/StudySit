@@ -57,35 +57,83 @@
         background-color: var(--color-background-primary);
         color: var(--color-text-primary);
     }
+
+    @media (max-width: 768px) {
+    #mobileNav {
+        width: 50% !important;
+        max-width: 200px;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+        pointer-events: none;
+    }
+    
+    #mobileNav.show {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+    }
+}
   </style>
 </head>
 <body class="bg-study-bg text-study-text">
 
-  <!-- HEADER & NAVIGATION -->
-  <header class="fixed top-0 w-full bg-study-bg/95 backdrop-blur-sm shadow-sm transition-all duration-300 z-50">
+   <!-- HEADER & NAVIGATION -->
+ <header class="fixed top-0 w-full bg-study-bg/95 backdrop-blur-sm shadow-sm transition-all duration-300 z-50">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-2xl font-bold text-study-text">StudySit</a>
-      <div class="hidden md:flex items-center space-x-6">
-        <a href="index.html" class="text-study-text hover:text-study-accent-secondary transition-colors duration-200">Home</a>
-        <a href="about.html" class="text-study-text hover:text-study-accent-secondary transition-colors duration-200">About</a>
-        <a href="spaces.html" class="text-study-text hover:text-study-accent-secondary transition-colors duration-200">Spaces</a>
-        <a href="pricing.html" class="text-study-text hover:text-study-accent-secondary transition-colors duration-200">Pricing</a>
-        <a href="contact.html" class="text-study-text hover:text-study-accent-secondary transition-colors duration-200">Contact</a>
-        <a href="faq.html" class="text-study-text hover:text-study-accent-secondary transition-colors duration-200">FAQ</a>
-      </div>
-      <div class="flex items-center space-x-4">
-        <a href="pricing.html#plans" class="bg-study-accent-cta text-study-text px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-200 active:scale-95">Book Now</a>
-        <button id="theme-toggle" class="p-2 rounded-full transition-colors duration-200 hover:bg-study-accent-secondary/20">
-          <svg id="theme-toggle-dark-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9.003 9.003 0 0015 3a9 9 0 00-9 9c0 4.223 2.91 7.82 6.873 8.783.5.093.5-.213.5-.474V19.5a.5.5 0 00-.5-.5 8.5 8.5 0 01-8.5-8.5 8.5 8.5 0 0110.158-8.135 1 1 0 001.079.136A8.5 8.5 0 0122 10.5c0 1.252-.267 2.44-.736 3.522a.5.5 0 00.182.635l2.518 1.708a.5.5 0 00.69-.635z"/>
-          </svg>
-          <svg id="theme-toggle-light-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M12 5a7 7 0 100 14 7 7 0 000-14z"/>
-          </svg>
-        </button>
-      </div>
+        <a href="index.html" class="text-2xl font-bold text-study-text">StudySit</a>
+        
+        <!-- Desktop Navigation (hidden on mobile) -->
+        <div class="hidden md:flex items-center space-x-6">
+            <a href="index.html" class="text-study-text hover:text-study-accent-secondary transition-colors duration-200">Home</a>
+            <a href="about.html" class="text-study-text hover:text-study-accent-secondary transition-colors duration-200">About</a>
+            <a href="spaces.html" class="text-study-text hover:text-study-accent-secondary transition-colors duration-200">Spaces</a>
+            <a href="pricing.html" class="text-study-text hover:text-study-accent-secondary transition-colors duration-200">Pricing</a>
+            <a href="contact.html" class="text-study-text hover:text-study-accent-secondary transition-colors duration-200">Contact</a>
+            <a href="faq.html" class="text-study-text hover:text-study-accent-secondary transition-colors duration-200">FAQ</a>
+        </div>
+
+        <!-- Right side buttons -->
+        <div class="flex items-center space-x-4">
+            <!-- Book Now button -->
+            <a href="pricing.html#plans" class="bg-study-accent-cta text-study-text px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-200 active:scale-95">Book Now</a>
+            
+            <!-- Mobile menu button - Changed to yellow -->
+            <button class="md:hidden bg-study-accent-cta text-study-text p-2 rounded-lg" id="mobileMenuBtn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            
+            <!-- Theme toggle -->
+            <button id="theme-toggle" class="p-2 rounded-full transition-colors duration-200 hover:bg-study-accent-secondary/20">
+                <svg id="theme-toggle-dark-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9.003 9.003 0 0015 3a9 9 0 00-9 9c0 4.223 2.91 7.82 6.873 8.783.5.093.5-.213.5-.474V19.5a.5.5 0 00-.5-.5 8.5 8.5 0 01-8.5-8.5 8.5 8.5 0 0110.158-8.135 1 1 0 001.079.136A8.5 8.5 0 0122 10.5c0 1.252-.267 2.44-.736 3.522a.5.5 0 00.182.635l2.518 1.708a.5.5 0 00.69-.635z"/>
+                </svg>
+                <svg id="theme-toggle-light-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M12 5a7 7 0 100 14 7 7 0 000-14z"/>
+                </svg>
+            </button>
+        </div>
     </nav>
-  </header>
+
+<!-- Mobile Navigation Menu - Fixed to show properly -->
+<div class="md:hidden hidden bg-study-accent-cta shadow-lg" id="mobileNav" style="width: 50%; max-width: 200px; position: absolute; right: 0; top: 100%;">
+    <div class="container mx-auto px-6 py-6 flex flex-col space-y-4">
+        <a href="index.html" class="text-study-text font-semibold hover:bg-study-bg/20 py-3 px-4 rounded-lg transition-all duration-200">Home</a>
+        <a href="about.html" class="text-study-text font-semibold hover:bg-study-bg/20 py-3 px-4 rounded-lg transition-all duration-200">About</a>
+        <a href="spaces.html" class="text-study-text font-semibold hover:bg-study-bg/20 py-3 px-4 rounded-lg transition-all duration-200">Spaces</a>
+        <a href="pricing.html" class="text-study-text font-semibold hover:bg-study-bg/20 py-3 px-4 rounded-lg transition-all duration-200">Pricing</a>
+        <a href="contact.html" class="text-study-text font-semibold hover:bg-study-bg/20 py-3 px-4 rounded-lg transition-all duration-200">Contact</a>
+        <a href="faq.html" class="text-study-text font-semibold hover:bg-study-bg/20 py-3 px-4 rounded-lg transition-all duration-200">FAQ</a>
+        <!-- Book Now in mobile menu -->
+        <a href="pricing.html#plans" class="bg-study-bg text-study-text font-semibold py-3 px-4 rounded-lg text-center hover:bg-opacity-90 transition-all duration-200 active:scale-95 mt-4">Book Now</a>
+    </div>
+</div>
+</header>
 
   <!-- MAIN CONTENT -->
   <main class="pt-24">
@@ -148,7 +196,7 @@
     </div>
   </footer>
 
-  <script>
+<script>
     // Dark Mode Toggle
     const themeToggle = document.getElementById("theme-toggle");
     const darkIcon = document.getElementById("theme-toggle-dark-icon");
@@ -172,7 +220,40 @@
     themeToggle.addEventListener("click", () => {
         setTheme(!document.documentElement.classList.contains("dark"));
     });
-  </script>
+
+    // Mobile menu toggle - WITH SMOOTH ANIMATION
+    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+        const mobileNav = document.getElementById('mobileNav');
+        
+        if (mobileNav.classList.contains('show')) {
+            // Close menu
+            mobileNav.classList.remove('show');
+            setTimeout(() => {
+                mobileNav.classList.add('hidden');
+            }, 300); // Match the transition duration
+        } else {
+            // Open menu
+            mobileNav.classList.remove('hidden');
+            // Small delay to allow display change before animation
+            setTimeout(() => {
+                mobileNav.classList.add('show');
+            }, 10);
+        }
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        
+        if (!mobileNav.contains(event.target) && !mobileMenuBtn.contains(event.target) && mobileNav.classList.contains('show')) {
+            mobileNav.classList.remove('show');
+            setTimeout(() => {
+                mobileNav.classList.add('hidden');
+            }, 300);
+        }
+    });
+</script>
 
 </body>
 </html>
