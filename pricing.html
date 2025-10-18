@@ -77,6 +77,47 @@
         pointer-events: all;
     }
 }
+
+/* Desktop Navbar Hover Animations - Enhanced */
+@media (min-width: 768px) {
+    .nav-link-item {
+        position: relative;
+        overflow: hidden;
+        padding: 10px 20px; /* Increased padding for bigger oval */
+        border-radius: 25px; /* More rounded for bigger oval */
+        transition: all 0.3s ease-in-out;
+        z-index: 1;
+    }
+    
+    .nav-link-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--color-accent-cta); /* Your yellow color */
+        border-radius: 25px; /* Match the increased border radius */
+        transition: left 0.3s ease-in-out;
+        z-index: -1;
+    }
+    
+    .nav-link-item:hover::before {
+        left: 0;
+    }
+    
+    .nav-link-item:hover {
+        color: var(--color-text-primary);
+        transform: translateY(-2px);
+        font-weight: 700 !important; /* Make text bold on hover */
+    }
+    
+    /* Ensure text stays on top of the oval */
+    .nav-link-item span {
+        position: relative;
+        z-index: 2;
+    }
+}
   </style>
 </head>
 <body class="bg-study-bg text-study-text">
@@ -87,14 +128,26 @@
         <a href="index.html" class="text-2xl font-bold text-study-text">StudySit</a>
         
         <!-- Desktop Navigation (hidden on mobile) -->
-        <div class="hidden md:flex items-center space-x-6">
-            <a href="index.html" class="text-study-text hover:text-study-accent-secondary transition-colors duration-200">Home</a>
-            <a href="about.html" class="text-study-text hover:text-study-accent-secondary transition-colors duration-200">About</a>
-            <a href="spaces.html" class="text-study-text hover:text-study-accent-secondary transition-colors duration-200">Spaces</a>
-            <a href="pricing.html" class="text-study-text hover:text-study-accent-secondary transition-colors duration-200">Pricing</a>
-            <a href="contact.html" class="text-study-text hover:text-study-accent-secondary transition-colors duration-200">Contact</a>
-            <a href="faq.html" class="text-study-text hover:text-study-accent-secondary transition-colors duration-200">FAQ</a>
-        </div>
+<div class="hidden md:flex items-center space-x-2">
+    <a href="index.html" class="nav-link-item text-study-text hover:text-study-text transition-colors duration-200">
+        <span>Home</span>
+    </a>
+    <a href="about.html" class="nav-link-item text-study-text hover:text-study-text transition-colors duration-200">
+        <span>About</span>
+    </a>
+    <a href="spaces.html" class="nav-link-item text-study-text hover:text-study-text transition-colors duration-200">
+        <span>Spaces</span>
+    </a>
+    <a href="pricing.html" class="nav-link-item text-study-text hover:text-study-text transition-colors duration-200">
+        <span>Pricing</span>
+    </a>
+    <a href="contact.html" class="nav-link-item text-study-text hover:text-study-text transition-colors duration-200">
+        <span>Contact</span>
+    </a>
+    <a href="faq.html" class="nav-link-item text-study-text hover:text-study-text transition-colors duration-200">
+        <span>FAQ</span>
+    </a>
+</div>
 
         <!-- Right side buttons -->
         <div class="flex items-center space-x-4">
